@@ -10,12 +10,9 @@ app.set('view engine', 'ejs');
 
 //Setting up different Routers
 const customerRouter = require('./routes/customer');
-const getCustomerIdForm = require('./routes/customer');
 const filmsNotReturnedRouter = require('./routes/films-not-returned');
 const topRentalsByStoreRouter = require('./routes/top-rentals-by-store');
 const filmsRouter = require('./routes/films');
-const { getFilmsRentedLastYear } = require('./services/customer.dal');
-
 
 app.listen(PORT, () => {
     console.log(`Simple app running on Port ${PORT}`);
@@ -49,7 +46,7 @@ app.use('/customer/films', filmsRouter);
 app.use('/films-not-returned', filmsNotReturnedRouter);
 
 // Top ten grossing rentalsl by each store
-app.use('/top-rentals-by-store', topRentalsByStoreRouter);
+app.use('/top-rentals-store-select', topRentalsByStoreRouter);
 
 // 404 page when no matches found
 app.use((req, res) => {
