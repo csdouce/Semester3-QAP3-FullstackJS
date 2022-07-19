@@ -10,9 +10,12 @@ app.set('view engine', 'ejs');
 
 //Setting up different Routers
 const customerRouter = require('./routes/customer');
+const getCustomerIdForm = require('./routes/customer');
 const filmsNotReturnedRouter = require('./routes/films-not-returned');
 const topRentalsByStoreRouter = require('./routes/top-rentals-by-store');
 const filmsRouter = require('./routes/films');
+const { getFilmsRentedLastYear } = require('./services/customer.dal');
+
 
 app.listen(PORT, () => {
     console.log(`Simple app running on Port ${PORT}`);
@@ -26,6 +29,16 @@ app.get('/', async (req, res) => {
 })
 
 // Movies rented by Customer
+app.get('/get-customer', async (req, res) => {
+    res.render('get-customer');
+});
+
+app.get('/getCustomerIdForm', function (req, res) {
+    const customerId = parseInt(req.query.customerIdText);
+
+    res.redirect(`/customer/${customerId}`);
+});
+
 app.use('/customer', customerRouter);
 
 //Library of Films
