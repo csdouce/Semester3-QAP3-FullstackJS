@@ -1,0 +1,12 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <form method="post" action="/customer/customer_id.value">
+      <label for="customer_id">Enter your Customer ID:</label>
+      <input type="text" id="customer_id" />
+      <button type="submit" name="customer-id" id="customer-id">SUBMIT</button>
+    </form>
+  </body>
+  <%- include('./partials/foot.ejs') %>
+</html>

@@ -1,0 +1,43 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <table class="pure-table pure-table-horizontal center film-details">
+      <thead>
+        <th class="film-details">
+          <span class="film-title"><%= film[0].title %></span>
+        </th>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="film-description"><%= film[0].description %></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold">Release Year:</span> <%= film[0].release_year %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold">Runtime:</span> <%= film[0].length %> minutes
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold">Release Year:</span> <%= film[0].release_year %>
+          </td>
+        </tr>
+        <tr>
+          <td><span class="bold">Rating:</span> <%= film[0].rating %></td>
+        </tr>
+        <tr>
+          <td>
+            <span class="bold">Rental Rate:</span> $<%= film[0].rental_rate %>
+            for <%= film[0].rental_duration %> days
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <%- include('./partials/foot.ejs') %>
+</html>

@@ -1,0 +1,39 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h2>Top 10 Grossing Film Rentals by Store</h2>
+    <div class="awards content">
+      <h3 class="margin-bottom">Store: <%= store1Films[0].store_address %></h3>
+      <table class="pure-table pure-table-horizontal center">
+      <thead>
+        <th>Film Title</th>
+        <th>Grossed</th>
+      </thead>
+      <tbody>
+      <% if (store1Films.length > 0) { %> <% store1Films.forEach(film => { %>
+        <tr>
+          <td><%= film.title %></td>
+          <td><%= film.rental_dollars%></td>
+        </tr>
+        <% }) %> <% } %>
+      </tbody>
+      </table>
+      <h3 class="margin-top margin-bottom">Store: <%= store2Films[0].store_address %></h3>
+      <table class="pure-table pure-table-horizontal center">
+        <thead>
+          <th>Film Title</th>
+          <th>Grossed</th>
+        </thead>
+        <tbody>
+        <% if (store2Films.length > 0) { %> <% store2Films.forEach(film => { %>
+          <tr>
+            <td><%= film.title %></td>
+            <td><%= film.rental_dollars%></td>
+          </tr>
+          <% }) %> <% } %>
+        </tbody>
+        </table>
+      </body>
+  <%- include('./partials/foot.ejs') %>
+</html>

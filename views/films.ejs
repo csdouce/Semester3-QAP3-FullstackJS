@@ -1,0 +1,21 @@
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/nav.ejs') %>
+    <h1>Film Library</h1>
+    <table class="pure-table pure-table-horizontal center">
+      <thead>
+        <th>Film Title</th>
+      </thead>
+
+      <tbody>
+        <% if (films.length > 0)%> <% films.forEach(film => { %>
+        <tr>
+          <td><a href="<%= film.film_id %>"> <%= film.title %></a></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+  <%- include('./partials/foot.ejs') %>
+</html>
