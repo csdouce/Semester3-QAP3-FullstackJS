@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+html{
+  font-size: 62.5%;
+}
+
 body{
   margin: 20px auto;
   padding: 0 20px;
   font-family: 'Open Sans', sans-serif;
   max-width: 1200px;
   text-align: center;
+  font-size: 1.75em;
+  background-color: rgb(250, 242, 230);
 }
 a:hover {
   /* color: red; */
   color: red;
-  font-weight: bold;
 }
 p, h1, h2, h3, a, ul{
   margin: 0;
   padding: 0;
   text-decoration: none;
   color: #222;
+  line-height: 1.6;
 }
 
 .center{
@@ -34,6 +40,9 @@ p, h1, h2, h3, a, ul{
 .home-paragraph{
   text-align: start;
   margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .film-details{
@@ -41,7 +50,11 @@ p, h1, h2, h3, a, ul{
 }
 
 .film-title{
-  font-size: 2.5em;
+  font-size: 4rem;
+}
+
+.film-listing{
+  font-size: 1.75rem;
 }
 
 .film-description{

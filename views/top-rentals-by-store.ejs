@@ -11,13 +11,14 @@
         <th>Film Title</th>
         <th>Grossed</th>
       </thead>
-      <tbody>
+      <tbody class="film-listing">
         <% let counter = 1 %>
         <% if (store.length > 0) { %> <% store.forEach(film => { %>
         <tr>
           <td><%= counter %></td>
           <% counter++ %>
-          <td><%= film.title %></td>
+          <% console.log(film.film_id) %>
+          <td><a href="films/<%= film.film_id %>"><%= film.title %></a></td>
           <td><%= film.rental_dollars%></td>
         </tr>
         <% }) %> <% } %>

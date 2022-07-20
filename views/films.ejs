@@ -2,16 +2,18 @@
   <%- include('./partials/head.ejs') %>
   <body>
     <%- include('./partials/nav.ejs') %>
-    <h1>Film Library</h1>
+    <h2>Film Library</h2>
     <table class="pure-table pure-table-horizontal center">
       <thead>
-        <th>Film Title</th>
+        <th class="film-details film-title">Film Title</th>
       </thead>
 
-      <tbody>
+      <tbody class="film-listing">
         <% if (films.length > 0)%> <% films.forEach(film => { %>
         <tr>
-          <td><a href="<%= film.film_id %>"> <%= film.title %></a></td>
+          <td>
+            <a href="<%= film.film_id %>"> <%= film.title %></a>
+          </td>
         </tr>
         <% }) %>
       </tbody>

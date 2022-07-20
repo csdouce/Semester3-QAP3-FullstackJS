@@ -5,7 +5,7 @@
     <div class="awards content">
       <h2>Films Rented by <%= films[0].full_name %> in the Last Year.</h2>
       <% if (films.length > 0) { %> <% films.forEach(film => { %>
-      <p class="film">
+      <p class="film-customer">
         <a href="films/<%= film.film_id %>"> <b><%= film.title %></b></a>
       </p>
       <% }) %> <% } %>

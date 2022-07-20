@@ -39,9 +39,11 @@ app.get('/getCustomerIdForm', function (req, res) {
 
 app.use('/customer', customerRouter);
 
-//Library of Films
+//Library of Films - Including for links from other pages to film details pages
 app.use('/films', filmsRouter);
 app.use('/customer/films', filmsRouter);
+app.use('/top-rentals-store-select/films', filmsRouter);
+app.use('/films-not-returned-store-select/films', filmsRouter);
 
 // Find Films thare are rented / Not Returned
 app.use('/films-not-returned-store-select', filmsNotReturnedRouter);
