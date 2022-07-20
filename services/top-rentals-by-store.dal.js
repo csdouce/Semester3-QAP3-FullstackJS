@@ -1,6 +1,6 @@
 const dal = require('../routes/db.js');
 
-const getStores = () => {
+const getStoresTopGrossFilms = () => {
 
     const sql = "SELECT * FROM vw_store_select";
     return new Promise(function (resolve, reject) {
@@ -35,5 +35,5 @@ const getTopFilms = function(id) {
 
 module.exports = {
     getTopFilms,
-    getStores,
+    getStoresTopGrossFilms,
 }
