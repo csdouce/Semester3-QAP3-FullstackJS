@@ -7,6 +7,7 @@ const filmsDal = require('../services/films.dal');
 
 router.get('/', async (req, res) => {
     let films = await filmsDal.getFilms();
+    
     if (films.length === 0) {
         res.render('norecord');
     } else {

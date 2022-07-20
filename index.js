@@ -41,7 +41,6 @@ app.use('/customer', customerRouter);
 
 //Library of Films
 app.use('/films', filmsRouter);
-app.use('/customer/films', filmsRouter);
 
 // Find Films thare are rented / Not Returned
 app.use('/films-not-returned-store-select', filmsNotReturnedRouter);

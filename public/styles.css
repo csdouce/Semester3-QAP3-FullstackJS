@@ -7,7 +7,9 @@ body{
   text-align: center;
 }
 a:hover {
-  color: grey;
+  /* color: red; */
+  color: red;
+  font-weight: bold;
 }
 p, h1, h2, h3, a, ul{
   margin: 0;
@@ -97,27 +99,5 @@ h3{
   max-width: 400px;
   margin: 0 auto;
 }
-.create input,
-.create textarea{
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 8px;
-}
-.create label{
-  display: block;
-  margin-top: 24px;
-}
-textarea{
-  height: 120px;
-}
-.create button{
-  margin-top: 20px;
-  background: crimson;
-  color: white;
-  padding: 6px;
-  border: 0;
-  font-size: 1.2em;
-  cursor: pointer;
-}
+
 
